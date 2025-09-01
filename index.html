@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Parson</title>
 
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
 
   <style>
@@ -31,7 +32,6 @@
     h2 {
       font-size: 2rem;
       margin-bottom: 20px;
-      border-bottom: 2px solid #ccc;
       padding-bottom: 10px;
     }
 
@@ -42,20 +42,24 @@
     }
 
     /* Contact Section */
-    .contact-section {
+    #contact {
       background-color: #376f02;
-      color: #fff;
+      color: white;
       text-align: center;
       padding: 40px 20px;
     }
 
-    .contact-section a {
-      color: #fff;
+    #contact h4 {
+      color: white;
+    }
+
+    #contact a {
+      color: white;
       font-size: 1.2rem;
       text-decoration: underline;
     }
 
-    /* Logo at bottom */
+    /* Logo Section */
     .logo {
       text-align: center;
       padding: 30px 0;
@@ -75,12 +79,12 @@
         font-size: 1rem;
       }
 
-      .contact-section h2,
-      .contact-section h4 {
+      #contact h2,
+      #contact h4 {
         font-size: 1.2rem;
       }
 
-      .contact-section a {
+      #contact a {
         font-size: 1rem;
       }
     }
@@ -94,7 +98,7 @@
     <img src="static/headerImage.png" alt="The Parson Header" />
   </header>
 
-  <!-- About Section -->
+  <!-- About Section (light background) -->
   <section class="container" id="about">
     <h2>About The Parson</h2>
     <h4>
@@ -102,19 +106,21 @@
       <br><br>
       The Parson is proudly local: keeping us all up to date on changes; supporting businesses in the area; helping you buy, sell, rent, or hire; championing artists, entrepreneurs and local events.
       <br><br>
-      We are wholly supported by our advertisers: meaning you can enjoy balanced, non-partisan news and current affairs for free.
+      We are wholly supported by our advertisers: meaning you can enjoy balanced, non-partisan news and current affairs for free, and never worry about paying to read about all the goings-on in your area.
       <br><br>
       We hope you enjoy reading.
     </h4>
   </section>
 
-  <!-- Contact Section -->
-  <section class="contact-section" id="contact">
-    <h2>Contact Us</h2>
-    <h4>
-      If you have comments, questions, issues, concerns,<br>or would like to chat, please email us on:
-    </h4>
-    <p><a href="mailto:hello@theparson.co.uk">hello@theparson.co.uk</a></p>
+  <!-- Contact Section (green background) -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <h4>
+        If you have comments, questions, issues, concerns,<br>or would like to chat, please email us on:
+      </h4>
+      <p><a href="mailto:hello@theparson.co.uk">hello@theparson.co.uk</a></p>
+    </div>
   </section>
 
   <!-- Logo Section -->
