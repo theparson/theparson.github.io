@@ -1,56 +1,126 @@
 <!DOCTYPE html>
-<html>
-<style>
-@font-face
-{
-    font-family:'Crimson';
-    src:url('static/Crimson_Text/CrimsonText-Regular.ttf');
-}
-
-html *
-{
-   font-family: Crimson !important;
-}
-</style>
+<html lang="en">
 <head>
-<title>The Parson</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Parson</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Crimson Text', serif;
+      color: #333;
+      background-color: #fafafa;
+      line-height: 1.6;
+    }
+
+    header img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+    }
+
+    h4 {
+      font-weight: normal;
+      font-size: 1.2rem;
+      color: #444;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      background-color: #376f02;
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .contact-section a {
+      color: #fff;
+      font-size: 1.2rem;
+      text-decoration: underline;
+    }
+
+    /* Logo at bottom */
+    .logo {
+      text-align: center;
+      padding: 30px 0;
+    }
+
+    .logo img {
+      width: 200px;
+      max-width: 100%;
+    }
+
+    @media (max-width: 600px) {
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      h4 {
+        font-size: 1rem;
+      }
+
+      .contact-section h2,
+      .contact-section h4 {
+        font-size: 1.2rem;
+      }
+
+      .contact-section a {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-  <img class="w3-image" src="static/headerImage.png" alt="The Parson" width="100%">
-
-</header>
-
+  <!-- Header Image -->
+  <header>
+    <img src="static/headerImage.png" alt="The Parson Header" />
+  </header>
 
   <!-- About Section -->
-  <div class="w3-container w3-padding-2" id="about" style="padding: 20px">
-    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">About The Parson</h2>
-    <h4>The Parson is the free, independent local newspaper for the Parsons Green area, delivered monthly to your door. We aim to provide interesting news and current affairs about our area, build a stronger sense of community, and highlight some of the amazing people, businesses and spaces we have on our collective doorstep. The Parson is proudly local: keeping us all up to date on changes; supporting businesses in the area; helping you buy, sell, rent, or hire; championing artists, entrepreneurs and local events. We are wholly supported by our advertisers: meaning you can enjoy balanced, non-partisan news and current affairs for free, and never worry about paying to read about all the goings-on in your area. We hope you enjoy reading.
+  <section class="container" id="about">
+    <h2>About The Parson</h2>
+    <h4>
+      The Parson is the free, independent local newspaper for the Parsons Green area, delivered monthly to your door. We aim to provide interesting news and current affairs about our area, build a stronger sense of community, and highlight some of the amazing people, businesses and spaces we have on our collective doorstep.
+      <br><br>
+      The Parson is proudly local: keeping us all up to date on changes; supporting businesses in the area; helping you buy, sell, rent, or hire; championing artists, entrepreneurs and local events.
+      <br><br>
+      We are wholly supported by our advertisers: meaning you can enjoy balanced, non-partisan news and current affairs for free.
+      <br><br>
+      We hope you enjoy reading.
     </h4>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <h2>Contact Us</h2>
+    <h4>
+      If you have comments, questions, issues, concerns,<br>or would like to chat, please email us on:
+    </h4>
+    <p><a href="mailto:hello@theparson.co.uk">hello@theparson.co.uk</a></p>
+  </section>
+
+  <!-- Logo Section -->
+  <div class="logo">
+    <img src="static/LogoSquare.png" alt="The Parson Logo" />
   </div>
-
-  <!-- Contact Us Section -->
-<center>
-<div style="background-color: #376f02; padding: 12px; font-family: Crimson">
-<h2 style="color: white">Contact us</h2>
-  <h4 style="color: white">If you have comments, questions, issues, concerns; <br>or would like to chat, please email us on:</h4>
-  <h3 class="w3-padding-12" style="color: white">  <a href="mailto:hello@theparson.co.uk">hello@theparson.co.uk</a></h3>
-</div>
-  </center>
-
-
-  <!-- Bottom Image -->
-<center>
-<div class="w3-container" style="padding: 20px">
-  <img src="static/LogoSquare.png" class="w3-image" style="width:300px" >
-</div>
-  </center>
-<!-- End page content -->
 
 </body>
 </html>
