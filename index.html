@@ -1,132 +1,294 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Parson</title>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width,initial-scale=1" name="viewport"/>
+    <title>The Parson</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+          rel="stylesheet">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Crimson Text', serif;
-      color: #333;
-      background-color: #fafafa;
-      line-height: 1.6;
+    <style>
+    :root{
+      --parson-green: #376f02; /* newspaper header green */
+      --paper: #FFFDF5;
+      --ink: #111;
+      --separator: #2d572c;
+      --max-width: 1020px;
     }
-
-    header img {
-      width: 100%;
-      height: auto;
-      display: block;
+    body{
+      margin:0;
+      background: gray;
+    font-family: Crimson !important;;
+      color: var(--ink);
     }
-
-    .container {
-      max-width: 900px;
+a:link {
+  color: var(--parson-green);
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: var(--parson-green);
+  background-color: transparent;
+  text-decoration: underline;
+}
+    .container{
+      max-width: var(--max-width);
       margin: 0 auto;
-      padding: 40px 20px;
-    }
-
-    h2 {
-      font-size: 2rem;
+      margin-top: 20px;
       margin-bottom: 20px;
-      padding-bottom: 10px;
+      border: 400px;
+      background: var(--paper);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    /* Masthead */
+    .masthead{
+      background: var(--parson-green);
+      color:var(--paper);
+      text-align:center;
+      padding:20px 20px 20px;
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+    .masthead h1{
+
+      font-size:120px;
+      margin:0;
+      letter-spacing:4px;
+    }
+    .masthead .tagline{
+      font-size:28px;
+      margin-top:4px;
+      letter-spacing:3px;
+    }
+    .issue-bar{
+      background: var(--paper);
+      color:var(--parson-green);
+      font-weight:700;
+      font-size:18px;
+      padding:10px 8px;
+
+      display:flex;
+      justify-content:space-between;
+    }
+    /* Main story */
+    .main-story{
+      padding:20px;
+      border-bottom:2px solid var(--separator);
+
+    }
+    .main-story img{
+      width:100%;
+      border:3px solid var(--separator);
+      margin-bottom:8px;
+    }
+    .main-story h2{
+      font-size:60px;
+      margin:8px 0;
+      text-align:center;
+    }
+    .main-story p{
+  column-count: 3;
+  column-gap: 4%;
+      font-size:20px;
+      line-height:1.6;
+      text-align:justify;
+    }
+    /* Layout below main story */
+    .below{
+      display:grid;
+      grid-template-columns:2fr 1fr;
+      gap:20px;
+      padding:20px;
+    }
+    .sub-story{
+      margin-bottom:24px;
+      border-bottom:1px solid var(--separator);
+      padding-bottom:16px;
+    }
+    .sub-story h3{
+      font-size:28px;
+      margin:6px 0;
+      color:var(--parson-green);
+    }
+    .sub-story img{
+      width:100%;
+      max-width:220px;
+      float:left;
+      margin:0 12px 8px 0;
+      border:1px solid var(--separator);
+    }
+    .sub-story p{
+      font-size:20px;
+      line-height:1.5;
+      text-align:justify;
+      column-count: 2;
+      column-gap: 4%;
+    }
+    /* Sidebar */
+    aside{
+      border-left:2px solid var(--separator);
+      padding-left:14px;
+
     }
 
-    h4 {
-      font-weight: normal;
-      font-size: 1.2rem;
-      color: #444;
+    aside p{
+     font-size:20px;
+      line-height:1.5;
+      text-align:left;
+    }
+    aside h2{
+    background-color: var(--parson-green);
+    padding: 8px;
+      font-size:34px;
+      color: var(--paper);
+    }
+    aside h3{
+      font-size:28px;
+      color:var(--parson-green);
+    }
+    /* Footer */
+    .footer{
+      text-align:center;
+      font-size:13px;
+      padding:12px;
+      border-top:1px solid var(--separator);
+      color:#555;
+    }
+    @media(max-width:800px){
+      .below{ grid-template-columns:1fr; }
+      .sub-story img{ float:none; margin:0 auto 8px auto; display:block; }
+      aside{ border:none; padding:0; margin-top:20px; }
     }
 
-    /* Contact Section */
-    #contact {
-      background-color: #376f02;
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    #contact h4 {
-      color: white;
-    }
-
-    #contact a {
-      color: white;
-      font-size: 1.2rem;
-      text-decoration: underline;
-    }
-
-    /* Logo Section */
-    .logo {
-      text-align: center;
-      padding: 30px 0;
-    }
-
-    .logo img {
-      width: 200px;
-      max-width: 100%;
-    }
-
-    @media (max-width: 600px) {
-      h2 {
-        font-size: 1.5rem;
-      }
-
-      h4 {
-        font-size: 1rem;
-      }
-
-      #contact h2,
-      #contact h4 {
-        font-size: 1.2rem;
-      }
-
-      #contact a {
-        font-size: 1rem;
-      }
-    }
-  </style>
+    
+    </style>
 </head>
-
 <body>
-
-  <!-- Header Image -->
-  <header>
-    <img src="static/headerImage.png" alt="The Parson Header" />
-  </header>
-
-  <!-- About Section (light background) -->
-  <section class="container" id="about">
-    <h2>About The Parson</h2>
-    <h4>
-      The Parson is the free, independent local newspaper for the Parsons Green area, delivered monthly to your door. We aim to provide interesting news and current affairs about our area, build a stronger sense of community, and highlight some of the amazing people, businesses and spaces we have on our collective doorstep.
-      <br><br>
-      The Parson is proudly local: keeping us all up to date on changes; supporting businesses in the area; helping you buy, sell, rent, or hire; championing artists, entrepreneurs and local events.
-      <br><br>
-      We are wholly supported by our advertisers: meaning you can enjoy balanced, non-partisan news and current affairs for free, and never worry about paying to read about all the goings-on in your area.
-      <br><br>
-      We hope you enjoy reading.
-    </h4>
-  </section>
-
-  <!-- Contact Section (green background) -->
-  <section id="contact">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <h4>
-        If you have comments, questions, issues, concerns,<br>or would like to chat, please email us on:
-      </h4>
-      <p><a href="mailto:hello@theparson.co.uk">hello@theparson.co.uk</a></p>
+<div class="container">
+    <!-- Issue bar -->
+    <div class="issue-bar">
+        <span>MONTHLY</span>
+        <span>FREE</span>
     </div>
-  </section>
 
-  <!-- Logo Section -->
-  <div class="logo">
-    <img src="static/LogoSquare.png" alt="The Parson Logo" />
-  </div>
+    <!-- Masthead -->
+    <header class="masthead">
+        <h1>THE PARSON</h1>
+        <div class="tagline">THE FREE LOCAL NEWSPAPER FOR PARSONS GREEN</div>
+    </header>
 
+    <!-- Main story -->
+    <section class="main-story">
+        <img alt="Main story" src="static/PGDaffs.jpg">
+
+        <p>
+            The Parson is the free, independent local newspaper for the Parsons Green area, delivered monthly to your
+            door. We aim to provide interesting news and current affairs about our area, build a stronger sense of
+            community, and highlight some of the amazing people, businesses and spaces we have on our collective
+            doorstep.
+            <br>
+            The Parson is proudly local: keeping us all up to date on changes; supporting businesses in the area;
+            helping you buy, sell, rent, or hire; championing artists, entrepreneurs and local events.
+            <br>
+            We are wholly supported by our advertisers: meaning you can enjoy balanced, non-partisan news and current
+            affairs for free, and never worry about paying to read about all the goings-on in your area.
+            <br>
+            We hope you enjoy reading.
+        </p>
+    </section>
+
+    <!-- Below main story -->
+    <div class="below">
+        <div>
+
+            <div class="sub-story">
+                <h3>Events</h3>
+
+
+                <p>
+                    We list monthly events in our <i>What's On</i> feature. If you host, run, or organise a local event
+                    - particularly if it's free or low-cost - let us know and we'd be delighted to include it!
+
+                    Tell us about your event at: <b><a href="MAILTO:ads@theparson.co.uk">ads@theparson.co.uk</a></b>
+                </p>
+
+
+            </div>
+
+            <div class="sub-story">
+                <h3>Advertising</h3>
+
+
+                <p>
+                    We hand-deliver 10,000 copies of our newspaper across SW6 at the start of every month, with another
+                    1,000 placed in local shops, cafes, and salons around our area.
+
+                    If you're interested in advertising, please find our ratecard <b><a
+                        href="ratecard.pdf">here</a></b>.
+                </p>
+
+            </div>
+            <div class="sub-story">
+                <h3>Announcements</h3>
+
+
+                <p>
+                    The Parson is delighted to publish announcements (e.g. births, deaths, engagements and other
+                    important life-events) for free. However, we would strongly encourage those wishing to publish such
+                    notices to donate a small sum to a charity of their choice in lieu of payment.
+
+                    To publish and annoucement, please send full and accurate wording to <b><a
+                        href="MAILTO:announcements@theparson.co.uk">announcements@theparson.co.uk</a></b>
+
+                </p>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside>
+
+            <h2>More information:</h2>
+            <div>
+                <h3>Contact Us</h3>
+                <p>
+                    Email: <b><a href="MAILTO:hello@theparson.co.uk">hello@theparson.co.uk</a></b>
+                </p>
+            </div>
+            <div>
+                <h3>Follow us on Instagram:</h3>
+                <!-- Instagram embed (replace URL with real account) -->
+                <blockquote class="instagram-media"
+                            data-instgrm-permalink="https://www.instagram.com/theparsonnewspaper/"
+                            data-instgrm-version="14"
+                            style=" background-color: pink; border:0; margin: 1px; max-width:540px; min-width:326px; padding:0; width:70%; ">
+                </blockquote>
+                <script async src="//www.instagram.com/embed.js"></script>
+                </li>
+            </div>
+            <div>
+                <h3>Editor</h3>
+                <p>Hector Forrester
+                    <br>
+                    Email: <b><a href="MAILTO:hector@theparson.co.uk">hector@theparson.co.uk</a></b>
+                </p>
+            </div>
+
+
+        </aside>
+    </div>
+
+    <div style="text-align: center;">
+        <img alt="The Parson" src="static/LogoSquare.png" width="20%">
+    </div>
+    <br>
+
+    <footer class="footer">
+        © 2025 The Parson — The free local newspaper for Parsons Green
+    </footer>
+</div>
 </body>
 </html>
