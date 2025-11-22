@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Answers — Advertising | The Parson</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+          rel="stylesheet">
+
+    <style>
+    :root{
+      --parson-green: #376f02;
+      --paper: #fffdf5;
+      --ink: #111;
+      --separator: #2d572c;
+      --max-width: 1020px;
+    }
+
+    body{
+      margin:0;
+      background: var(--parson-green) url('/static/black-orchid.png');
+      font-family: 'Crimson Text', serif !important;
+      color: var(--ink);
+    }
+
+    a:link { color: var(--parson-green); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container{
+      max-width: var(--max-width);
+      margin: 20px auto;
+      background: var(--paper) url('/static/paper-fibres.png');
+      background-size: auto;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.35);
+      border: 1px solid #ccc;
+    }
+
+    .masthead{
+      background: var(--parson-green);
+      color:var(--paper);
+      text-align:center;
+      padding:20px;
+      margin: 0 12px;
+    }
+    .masthead h1{
+      font-size:120px;
+      margin:0;
+      letter-spacing:4px;
+    }
+    .masthead .tagline{
+      font-size:28px;
+      margin-top:4px;
+      letter-spacing:3px;
+    }
+    .issue-bar{
+      background: var(--paper);
+      color:var(--parson-green);
+      font-weight:700;
+      font-size:18px;
+      padding:10px 8px;
+      display:flex;
+      justify-content:space-between;
+    }
+
+    .footer{
+      text-align:center;
+      font-size:13px;
+      padding:12px;
+      border-top:1px solid var(--separator);
+      color:#555;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Answers layout */
+    .answers-page{
+      padding:24px 24px 32px 24px;
+    }
+
+    .answers-page h1{
+      font-size:40px;
+      margin:0 0 12px 0;
+      text-align:center;
+      letter-spacing:1px;
+    }
+
+    .answers-nav{
+      text-align:center;
+      font-size:18px;
+      margin-bottom:28px;
+    }
+
+    .answers-nav a{
+      margin:0 8px;
+    }
+
+    .answers-nav .current{
+      font-weight:700;
+    }
+
+    .answer-block{
+      max-width:780px;
+      margin:0 auto 24px auto;
+    }
+
+    .answer-block h2{
+      font-size:26px;
+      margin-bottom:8px;
+      color:var(--parson-green);
+    }
+
+    .answer-block p{
+      font-size:20px;
+      line-height:1.6;
+    }
+
+    .answers-table{
+      width:100%;
+      border-collapse:collapse;
+      margin:8px 0;
+      font-size:18px;
+    }
+
+    .answers-table th,
+    .answers-table td{
+      border:1px solid #ccc;
+      padding:8px 10px;
+    }
+
+    .answers-table th{
+      background:#f1f1e5;
+    }
+
+    .answers-table td:nth-child(2),
+    .answers-table td:nth-child(3){
+      text-align:right;
+    }
+
+    .answers-meta{
+      font-size:14px;
+      color:#555;
+      margin-top:4px;
+    }
+
+    @media(max-width:1000px){
+      .masthead h1 {
+        font-size:80px;
+      }
+      .masthead .tagline {
+        font-size:20px;
+        letter-spacing:1px;
+      }
+      .answers-page h1{
+        font-size:32px;
+      }
+    }
+
+    @media(max-width:500px){
+      .masthead h1 {
+        font-size:50px;
+        letter-spacing:2px;
+      }
+      .masthead .tagline {
+        font-size:16px;
+      }
+      .answers-page{
+        padding:16px;
+      }
+      .answer-block p{
+        font-size:16px;
+      }
+      .answers-table{
+        font-size:16px;
+      }
+    }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="issue-bar">
+        <span>MONTHLY</span>
+        <span>FREE</span>
+    </div>
+
+    <header class="masthead">
+        <h1>THE PARSON</h1>
+        <div class="tagline">THE FREE LOCAL NEWSPAPER FOR PARSONS GREEN</div>
+    </header>
+
+    <main class="answers-page">
+        <h1>Answers — Advertising</h1>
+
+        <nav class="answers-nav" aria-label="Answers navigation">
+            <a href="/answers/">Overview</a> ·
+            <span class="current">Advertising</span> ·
+            <a href="/answers/readers.html">Readers &amp; community</a> ·
+            <a href="/answers/editorial.html">Editorial &amp; submissions</a>
+        </nav>
+
+        <section class="answer-block" id="how-to-advertise">
+            <h2>How do I advertise in The Parson?</h2>
+            <p>
+                Email
+                <strong><a href="mailto:ads@theparson.co.uk?subject=Advertising%20enquiry%20(Answers%20page)">ads@theparson.co.uk</a></strong>
+                to book your advert in the next issue. We publish monthly and print in full colour. Formats include
+                quarter, third, half, full page and double-page spread. Prices are per issue, with discounts for
+                repeated adverts, charitable causes and eligible local businesses in SW6. For deadlines and artwork
+                guidance, please email the team.
+            </p>
+            <p class="answers-meta">
+                Updated Nov 2025<br>
+                Source: current rate card and site contact page.
+            </p>
+        </section>
+
+        <section class="answer-block" id="rates">
+            <h2>What are the advertising rates and sizes?</h2>
+            <p>
+                Display adverts are priced per issue and printed in full colour. Current rates and print sizes:
+            </p>
+
+            <table class="answers-table">
+                <thead>
+                <tr>
+                    <th>Format</th>
+                    <th>Price (per issue)</th>
+                    <th>Size (mm)</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>DPS</td>
+                    <td>£2,500</td>
+                    <td>548 × 332</td>
+                </tr>
+                <tr>
+                    <td>Full page</td>
+                    <td>£1,500</td>
+                    <td>264 × 332</td>
+                </tr>
+                <tr>
+                    <td>Half page</td>
+                    <td>£800</td>
+                    <td>264 × 166</td>
+                </tr>
+                <tr>
+                    <td>Third page</td>
+                    <td>£600</td>
+                    <td>165 × 200</td>
+                </tr>
+                <tr>
+                    <td>Quarter page</td>
+                    <td>£400</td>
+                    <td>135 × 165</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <p>
+                Prices may update between issues — check the
+                <strong><a href="/ratecard.pdf">rate card (PDF)</a></strong> before booking.
+            </p>
+
+            <p class="answers-meta">
+                Updated Nov 2025<br>
+                Source: rate card.
+            </p>
+        </section>
+
+        <section class="answer-block" id="local-discount">
+            <h2>Do local SW6 businesses get a discount?</h2>
+            <p>
+                Yes. Businesses and individuals in <strong>SW6 3</strong>, <strong>SW6 4</strong> and <strong>SW6 5</strong>
+                receive a <strong>25% local discount</strong> on display advertising prices. Mention your postcode when
+                booking via
+                <strong><a href="mailto:ads@theparson.co.uk?subject=Local%20discount%20enquiry%20(Answers%20page)">ads@theparson.co.uk</a></strong>.
+            </p>
+            <p class="answers-meta">
+                Updated Nov 2025<br>
+                Source: rate card.
+            </p>
+        </section>
+
+        <section class="answer-block" id="positions">
+            <h2>Can I choose where my advert appears?</h2>
+            <p>
+                We do not offer preferred positions. Adverts are placed throughout the paper, never adjacent to each
+                other, and not on the front or back cover. This protects reader experience and overall performance.
+            </p>
+            <p class="answers-meta">
+                Updated Nov 2025<br>
+                Source: rate card.
+            </p>
+        </section>
+
+        <section class="answer-block" id="artwork">
+            <h2>What artwork sizes do you accept?</h2>
+            <p>
+                Prepare artwork to the sizes shown under rates and sizes. For file formats, bleed and colour management,
+                email
+                <strong><a href="mailto:ads@theparson.co.uk?subject=Artwork%20spec%20question%20(Answers%20page)">ads@theparson.co.uk</a></strong>
+                and the team will confirm the current specification and deadlines.
+            </p>
+            <p class="answers-meta">
+                Updated Nov 2025
+            </p>
+        </section>
+
+        <section class="answer-block" id="advertorial">
+            <h2>Do you offer advertorial articles?</h2>
+            <p>
+                Yes. We produce clearly labelled advertorials for suitable subjects. Pricing depends on the brief and
+                placement. Email
+                <strong><a href="mailto:ads@theparson.co.uk?subject=Advertorial%20enquiry%20(Answers%20page)">ads@theparson.co.uk</a></strong>
+                with your idea and timeframe.
+            </p>
+            <p class="answers-meta">
+                Updated Nov 2025
+            </p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        © 2025 The Parson - The free local newspaper for Parsons Green
+    </footer>
+</div>
+</body>
+</html>

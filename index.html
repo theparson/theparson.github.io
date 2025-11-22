@@ -171,6 +171,25 @@ img {
   height: auto;
 }
 
+.seo-link{
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 11px;
+  opacity: 0.6;
+  z-index: 1000;
+}
+
+.seo-link a{
+  color: #777;
+  text-decoration: none;
+}
+
+.seo-link a:hover{
+  text-decoration: underline;
+  opacity: 0.9;
+}
+
 /* Responsive adjustments */
 @media(max-width: 1000px) {
   .masthead h1 {
@@ -345,6 +364,10 @@ img {
     <footer class="footer">
         © 2025 The Parson - The free local newspaper for Parsons Green
     </footer>
+</div>
+
+<div class="seo-link">
+  <a href="/answers/">SEO content</a>
 </div>
 </body>
 </html>

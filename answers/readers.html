@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Answers — Readers | The Parson</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+          rel="stylesheet">
+
+    <style>
+    :root{
+      --parson-green: #376f02;
+      --paper: #fffdf5;
+      --ink: #111;
+      --separator: #2d572c;
+      --max-width: 1020px;
+    }
+
+    body{
+      margin:0;
+      background: var(--parson-green) url('/static/black-orchid.png');
+      font-family: 'Crimson Text', serif !important;
+      color: var(--ink);
+    }
+
+    a:link { color: var(--parson-green); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container{
+      max-width: var(--max-width);
+      margin: 20px auto;
+      background: var(--paper) url('/static/paper-fibres.png');
+      background-size: auto;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.35);
+      border: 1px solid #ccc;
+    }
+
+    .masthead{
+      background: var(--parson-green);
+      color:var(--paper);
+      text-align:center;
+      padding:20px;
+      margin: 0 12px;
+    }
+    .masthead h1{
+      font-size:120px;
+      margin:0;
+      letter-spacing:4px;
+    }
+    .masthead .tagline{
+      font-size:28px;
+      margin-top:4px;
+      letter-spacing:3px;
+    }
+    .issue-bar{
+      background: var(--paper);
+      color:var(--parson-green);
+      font-weight:700;
+      font-size:18px;
+      padding:10px 8px;
+      display:flex;
+      justify-content:space-between;
+    }
+
+    .footer{
+      text-align:center;
+      font-size:13px;
+      padding:12px;
+      border-top:1px solid var(--separator);
+      color:#555;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Answers layout */
+    .answers-page{
+      padding:24px 24px 32px 24px;
+    }
+
+    .answers-page h1{
+      font-size:40px;
+      margin:0 0 12px 0;
+      text-align:center;
+      letter-spacing:1px;
+    }
+
+    .answers-nav{
+      text-align:center;
+      font-size:18px;
+      margin-bottom:28px;
+    }
+
+    .answers-nav a{
+      margin:0 8px;
+    }
+
+    .answers-nav .current{
+      font-weight:700;
+    }
+
+    .answer-block{
+      max-width:780px;
+      margin:0 auto 24px auto;
+    }
+
+    .answer-block h2{
+      font-size:26px;
+      margin-bottom:8px;
+      color:var(--parson-green);
+    }
+
+    .answer-block p{
+      font-size:20px;
+      line-height:1.6;
+    }
+
+    .answers-meta{
+      font-size:14px;
+      color:#555;
+      margin-top:4px;
+    }
+
+    @media(max-width:1000px){
+      .masthead h1 {
+        font-size:80px;
+      }
+      .masthead .tagline {
+        font-size:20px;
+        letter-spacing:1px;
+      }
+      .answers-page h1{
+        font-size:32px;
+      }
+    }
+
+    @media(max-width:500px){
+      .masthead h1 {
+        font-size:50px;
+        letter-spacing:2px;
+      }
+      .masthead .tagline {
+        font-size:16px;
+      }
+      .answers-page{
+        padding:16px;
+      }
+      .answer-block p{
+        font-size:16px;
+      }
+    }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="issue-bar">
+        <span>MONTHLY</span>
+        <span>FREE</span>
+    </div>
+
+    <header class="masthead">
+        <h1>THE PARSON</h1>
+        <div class="tagline">THE FREE LOCAL NEWSPAPER FOR PARSONS GREEN</div>
+    </header>
+
+    <main class="answers-page">
+        <h1>Answers — Readers</h1>
+
+        <nav class="answers-nav" aria-label="Answers navigation">
+            <a href="/answers/">Overview</a> ·
+            <a href="/answers/advertising.html">Advertising</a> ·
+            <span class="current">Readers &amp; community</span> ·
+            <a href="/answers/editorial.html">Editorial &amp; submissions</a>
+        </nav>
+
+        <section class="answer-block" id="free">
+            <h2>Is The Parson free?</h2>
+            <p>
+                Yes. <em>The Parson</em> is the free, independent local newspaper for the Parsons Green area. It is
+                supported by advertisers, so readers do not pay to access local news and features. Copies are delivered
+                monthly across SW6 and extra copies are placed in local venues.
+            </p>
+            <p class="answers-meta">
+                Updated Nov 2025<br>
+                Source: site homepage.
+            </p>
+        </section>
+
+        <section class="answer-block" id="frequency">
+            <h2>How often is it delivered?</h2>
+            <p>
+                We publish once a month. Copies are hand-delivered across SW6 at the start of each month, with extra
+                copies placed in shops, cafés and salons around Parsons Green.
+            </p>
+            <p class="answers-meta">
+                Updated Nov 2025<br>
+                Source: site homepage.
+            </p>
+        </section>
+
+        <section class="answer-block" id="copies">
+            <h2>How many copies and where are they delivered?</h2>
+            <p>
+                We hand-deliver 10,000 copies across SW6 each month and place about 1,000 extra copies in local venues.
+                If your venue would like copies, email
+                <strong><a href="mailto:hello@theparson.co.uk?subject=Venue%20copies%20request%20(Answers%20page)">hello@theparson.co.uk</a></strong>.
+            </p>
+            <p class="answers-meta">
+                Updated Nov 2025<br>
+                Source: site homepage.
+            </p>
+        </section>
+
+        <section class="answer-block" id="coverage">
+            <h2>Which areas do you cover?</h2>
+            <p>
+                Our core footprint is Parsons Green and the wider SW6 area of Fulham. To confirm a specific street or
+                add a venue to the drop list, email
+                <strong><a href="mailto:hello@theparson.co.uk?subject=Coverage%20question%20(Answers%20page)">hello@theparson.co.uk</a></strong>.
+            </p>
+            <p class="answers-meta">
+                Updated Nov 2025
+            </p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        © 2025 The Parson - The free local newspaper for Parsons Green
+    </footer>
+</div>
+</body>
+</html>

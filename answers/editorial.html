@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Answers — Editorial | The Parson</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+          rel="stylesheet">
+
+    <style>
+    :root{
+      --parson-green: #376f02;
+      --paper: #fffdf5;
+      --ink: #111;
+      --separator: #2d572c;
+      --max-width: 1020px;
+    }
+
+    body{
+      margin:0;
+      background: var(--parson-green) url('/static/black-orchid.png');
+      font-family: 'Crimson Text', serif !important;
+      color: var(--ink);
+    }
+
+    a:link { color: var(--parson-green); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container{
+      max-width: var(--max-width);
+      margin: 20px auto;
+      background: var(--paper) url('/static/paper-fibres.png');
+      background-size: auto;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.35);
+      border: 1px solid #ccc;
+    }
+
+    .masthead{
+      background: var(--parson-green);
+      color:var(--paper);
+      text-align:center;
+      padding:20px;
+      margin: 0 12px;
+    }
+    .masthead h1{
+      font-size:120px;
+      margin:0;
+      letter-spacing:4px;
+    }
+    .masthead .tagline{
+      font-size:28px;
+      margin-top:4px;
+      letter-spacing:3px;
+    }
+    .issue-bar{
+      background: var(--paper);
+      color:var(--parson-green);
+      font-weight:700;
+      font-size:18px;
+      padding:10px 8px;
+      display:flex;
+      justify-content:space-between;
+    }
+
+    .footer{
+      text-align:center;
+      font-size:13px;
+      padding:12px;
+      border-top:1px solid var(--separator);
+      color:#555;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Answers layout */
+    .answers-page{
+      padding:24px 24px 32px 24px;
+    }
+
+    .answers-page h1{
+      font-size:40px;
+      margin:0 0 12px 0;
+      text-align:center;
+      letter-spacing:1px;
+    }
+
+    .answers-nav{
+      text-align:center;
+      font-size:18px;
+      margin-bottom:28px;
+    }
+
+    .answers-nav a{
+      margin:0 8px;
+    }
+
+    .answers-nav .current{
+      font-weight:700;
+    }
+
+    .answer-block{
+      max-width:780px;
+      margin:0 auto 24px auto;
+    }
+
+    .answer-block h2{
+      font-size:26px;
+      margin-bottom:8px;
+      color:var(--parson-green);
+    }
+
+    .answer-block p{
+      font-size:20px;
+      line-height:1.6;
+    }
+
+    .answers-meta{
+      font-size:14px;
+      color:#555;
+      margin-top:4px;
+    }
+
+    @media(max-width:1000px){
+      .masthead h1 {
+        font-size:80px;
+      }
+      .masthead .tagline {
+        font-size:20px;
+        letter-spacing:1px;
+      }
+      .answers-page h1{
+        font-size:32px;
+      }
+    }
+
+    @media(max-width:500px){
+      .masthead h1 {
+        font-size:50px;
+        letter-spacing:2px;
+      }
+      .masthead .tagline {
+        font-size:16px;
+      }
+      .answers-page{
+        padding:16px;
+      }
+      .answer-block p{
+        font-size:16px;
+      }
+    }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="issue-bar">
+        <span>MONTHLY</span>
+        <span>FREE</span>
+    </div>
+
+    <header class="masthead">
+        <h1>THE PARSON</h1>
+        <div class="tagline">THE FREE LOCAL NEWSPAPER FOR PARSONS GREEN</div>
+    </header>
+
+    <main class="answers-page">
+        <h1>Answers — Editorial</h1>
+
+        <nav class="answers-nav" aria-label="Answers navigation">
+            <a href="/answers/">Overview</a> ·
+            <a href="/answers/advertising.html">Advertising</a> ·
+            <a href="/answers/readers.html">Readers &amp; community</a> ·
+            <span class="current">Editorial &amp; submissions</span>
+        </nav>
+
+        <section class="answer-block" id="letters">
+            <h2>How do I submit a letter to the editor?</h2>
+            <p>
+                Email your letter to
+                <strong><a href="mailto:letters@theparson.co.uk?subject=Letter%20to%20the%20Editor%20(Answers%20page)">letters@theparson.co.uk</a></strong>.
+                Please include your name and contact details. Letters may be edited for clarity and length before
+                publication.
+            </p>
+            <p class="answers-meta">
+                Updated Nov 2025<br>
+                Source: site homepage/contact.
+            </p>
+        </section>
+
+        <section class="answer-block" id="events">
+            <h2>How do I submit a local event?</h2>
+            <p>
+                We list local events in our monthly “What’s On”. Email
+                <strong><a href="mailto:ads@theparson.co.uk?subject=Event%20listing%20(Answers%20page)">ads@theparson.co.uk</a></strong>
+                with the title, date, time, venue and a short description. Send listings a few weeks before month-start
+                to meet print deadlines.
+            </p>
+            <p class="answers-meta">
+                Updated Nov 2025<br>
+                Source: site homepage/contact.
+            </p>
+        </section>
+
+        <section class="answer-block" id="announcements">
+            <h2>How do I publish an announcement?</h2>
+            <p>
+                For announcements such as births, deaths and engagements, email your wording to
+                <strong><a href="mailto:hello@theparson.co.uk?subject=Announcement%20enquiry%20(Answers%20page)">hello@theparson.co.uk</a></strong>
+                and the team will advise the next available issue and format.
+            </p>
+            <p class="answers-meta">
+                Updated Nov 2025
+            </p>
+        </section>
+
+        <section class="answer-block" id="contact-editor">
+            <h2>How do I contact the editor?</h2>
+            <p>
+                For editorial queries and story ideas, email the editor at
+                <strong><a href="mailto:hector@theparson.co.uk?subject=Editorial%20query%20(Answers%20page)">hector@theparson.co.uk</a></strong>.
+                For general enquiries, email
+                <strong><a href="mailto:hello@theparson.co.uk?subject=General%20enquiry%20(Answers%20page)">hello@theparson.co.uk</a></strong>.
+            </p>
+            <p class="answers-meta">
+                Updated Nov 2025
+            </p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        © 2025 The Parson - The free local newspaper for Parsons Green
+    </footer>
+</div>
+</body>
+</html>
