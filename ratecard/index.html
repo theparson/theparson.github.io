@@ -36,20 +36,30 @@
       font-family: Arial, sans-serif;
       font-size: 0.9rem;
     }
+    .advertise {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.4rem;
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+  .advertise a {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #000;
+  }
+  .advertise a:hover {
+    opacity: 0.7;
+  }
   </style>
 </head>
 
 <body>
-  <header>
-    <h1>Advertising Rate Card</h1>
-    <p class="download">
-      <a href="/ratecard.pdf" download>Download PDF</a>
-    </p>
-  </header>
-
   <iframe
     src="/ratecard.pdf"
     title="The Parson advertising rate card">
   </iframe>
+  <h2 class="advertise">
+  <a href="mailto:ads@theparson.co.uk">To advertise, email us</a>
+</h2>
 </body>
 </html>
