@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting — The Parson</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Short delay to give GA time to fire -->
+  <meta http-equiv="refresh" content="2">
+
+  <style>
+        body {
+      margin: 0;
+      padding: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: #fff;
+      color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 1rem;
+    }
+    .wrap {
+      max-width: 600px;
+      width: 100%;
+    }
+    h1 {
+      font-size: 2rem;
+      margin: 0.5rem 0;
+      font-weight: bold;
+    }
+    p {
+      margin: 0.3rem 0;
+      font-size: 1rem;
+      font-family: Arial, sans-serif;
+    }
+    .footer {
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: #555;
+    }
+  </style>
+
+  <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const dest = params.get("to");
+
+      if (!dest || !(dest.startsWith("http://") || dest.startsWith("https://"))) {
+        document.addEventListener("DOMContentLoaded", function () {
+          document.body.innerHTML = "<div class='wrap'><h1>Error</h1><p>Missing or invalid redirect URL.</p></div>";
+        });
+        return;
+      }
+
+      setTimeout(function () {
+        window.location.href = dest;
+      }, 1500);
+    })();
+  </script>
+</head>
+
+<body>
+  <div class="wrap">
+    <h1>Redirecting…</h1>
+    <p>You’ll be taken to the petition page shortly.</p>
+    <p>If this doesn’t happen, please follow your link manually.</p>
+
+    <div class="footer">
+      <p>From <strong>The Parson</strong> — Parsons Green’s local paper.</p>
+    </div>
+  </div>
+</body>
+</html>
