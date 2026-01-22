@@ -16,47 +16,42 @@
 </script>
 
   <style>
-    body {
+   html, body {
+      height: 100%;
       margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      background: #fff;
-      color: #000;
     }
-    header {
-      padding: 1rem;
-      border-bottom: 1px solid #ddd;
-      text-align: center;
-    }
+
     iframe {
-      width: 100%;
-      height: calc(100vh - 70px);
-      border: none;
-    }
-      .advertise {
       position: fixed;
-      bottom: 1rem;
+      inset: 0;           /* top/right/bottom/left = 0 */
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    .cta {
+      position: fixed;
       right: 1rem;
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 0.95rem;
-    }
-    .advertise a {
-      color: #2f6b4f; /* The Parson green */
+      bottom: 1rem;
+      z-index: 10;
+      padding: 0.6rem 0.9rem;
+      font: 600 0.95rem/1 Arial, sans-serif;
+      color: #2f6b4f;              /* site green */
+      background: rgba(255,255,255,0.92);
+      border: 1px solid rgba(0,0,0,0.15);
+      border-radius: 999px;
       text-decoration: none;
+      backdrop-filter: blur(6px);
     }
-    .advertise a:hover {
-      text-decoration: underline;
-    }
+
+    .cta:hover { text-decoration: underline; }
   </style>
 </head>
 
 <body>
-  <iframe
-    src="/ratecard.pdf"
-    title="The Parson advertising rate card">
-  </iframe>
-  <h2 class="advertise">
-  <a href="mailto:ads@theparson.co.uk">To advertise, email us</a>
-</h2>
+    <iframe src="/ratecard.pdf" title="The Parson advertising rate card"></iframe>
+
+  <a class="cta" href="mailto:ads@theparson.co.uk">Advertise with us →</a>
 </body>
 </html>
