@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>The Parson — Reader Survey</title>
+
+  <!-- Fonts (same as main site) -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+  <style>
+    :root{
+      --parson-green: #376f02;
+      --paper: #fffdf5;
+      --ink: #111;
+      --separator: #2d572c;
+      --max-width: 1020px;
+    }
+
+    body{
+      margin:0;
+      background: var(--parson-green) url('static/black-orchid.png');
+      font-family: 'Crimson Text', serif !important;
+      color: var(--ink);
+    }
+
+    a:link { color: var(--parson-green); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container{
+      max-width: var(--max-width);
+      margin: 20px auto;
+      background: var(--paper) url('static/paper-fibres.png');
+      background-size: auto;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.35);
+      border: 1px solid #ccc;
+    }
+
+    /* Masthead (same) */
+    .masthead{
+      background: var(--parson-green);
+      color:var(--paper);
+      text-align:center;
+      padding:20px;
+      margin: 0 12px;
+    }
+    .masthead h1{
+      font-size:120px;
+      margin:0;
+      letter-spacing:4px;
+    }
+    .masthead .tagline{
+      font-size:28px;
+      margin-top:4px;
+      letter-spacing:3px;
+    }
+    .issue-bar{
+      background: var(--paper);
+      color:var(--parson-green);
+      font-weight:700;
+      font-size:18px;
+      padding:10px 8px;
+      display:flex;
+      justify-content:space-between;
+    }
+
+    /* Survey page layout */
+    .page{
+      padding: 20px;
+    }
+
+    .headline{
+      text-align:center;
+      margin: 6px 0 10px 0;
+      font-size: 60px;
+    }
+
+    .deck{
+      max-width: 900px;
+      margin: 0 auto 14px auto;
+      font-size: 20px;
+      line-height: 1.6;
+      text-align: justify;
+      border-top: 2px solid var(--separator);
+      border-bottom: 2px solid var(--separator);
+      padding: 12px 10px;
+    }
+
+    .callouts{
+      display:grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 20px;
+      padding: 10px 0 0 0;
+    }
+
+    .panel{
+      border: 1px solid var(--separator);
+      background: rgba(255,255,255,0.5);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      padding: 14px;
+    }
+
+    .panel h3{
+      margin: 4px 0 10px 0;
+      font-size: 28px;
+      color: var(--parson-green);
+      font-variant: small-caps;
+      letter-spacing: 0.5px;
+    }
+
+    .panel p, .panel li{
+      font-size: 20px;
+      line-height: 1.5;
+    }
+
+    .panel ul{
+      margin: 10px 0 0 18px;
+      padding: 0;
+    }
+
+    .survey-wrap{
+      margin-top: 18px;
+      padding: 14px;
+      border: 3px solid var(--separator);
+      background: rgba(255,255,255,0.65);
+    }
+
+    /* Responsive iframe container */
+    .embed-shell{
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .embed-note{
+      max-width: 820px;
+      margin: 0 auto 10px auto;
+      font-size: 18px;
+      line-height: 1.5;
+      color: #333;
+    }
+
+    /* Optional: nice little “rule” separator */
+    .rule{
+      height: 1px;
+      background: var(--separator);
+      opacity: 0.55;
+      margin: 14px 0;
+    }
+
+    /* Footer (same) */
+    .footer{
+      text-align:center;
+      font-size:13px;
+      padding:12px;
+      border-top:1px solid var(--separator);
+      color:#555;
+    }
+
+    /* Images general */
+    img { max-width: 100%; height: auto; }
+
+    .seo-link{
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      font-size: 11px;
+      opacity: 0.6;
+      z-index: 1000;
+    }
+    .seo-link a{
+      color: #777;
+      text-decoration: none;
+    }
+    .seo-link a:hover{
+      text-decoration: underline;
+      opacity: 0.9;
+    }
+
+    /* Responsive adjustments */
+    @media(max-width: 1000px) {
+      .masthead h1 { font-size: 80px; }
+      .masthead .tagline { font-size: 20px; letter-spacing: 1px; }
+      .headline { font-size: 40px; }
+    }
+
+    @media(max-width: 800px) {
+      .callouts { grid-template-columns: 1fr; }
+      .deck { font-size: 18px; line-height: 1.5; }
+      .panel p, .panel li { font-size: 18px; }
+    }
+
+    @media(max-width: 500px) {
+      .masthead h1 { font-size: 50px; letter-spacing: 2px; }
+      .masthead .tagline { font-size: 16px; }
+      .headline { font-size: 28px; }
+      .deck { font-size: 16px; }
+      .issue-bar {
+        font-size: 14px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .panel p, .panel li { font-size: 16px; }
+      .embed-note { font-size: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Masthead -->
+    <header class="masthead">
+      <h1>THE PARSON</h1>
+      <div class="tagline">THE FREE LOCAL NEWSPAPER FOR PARSONS GREEN</div>
+    </header>
+
+    <main class="page">
+      <h2 class="headline">Reader Survey</h2>
+
+      <div class="deck">
+        We’re running a short reader survey to help us improve <i>The Parson</i> and to help us understand how
+        our readership engages with the newspaper. It takes just a few minutes, and every response genuinely helps. Thank you for taking the time to complete it! 
+      </div>
+
+      <div class="callouts">
+        <section class="panel">
+          <h3>Before you start</h3>
+          <ul>
+            <li><b>Time:</b> ~3 minutes</li>
+            <li><b>Anonymous:</b> please don’t include ANY personal details</li>
+            <li><b>Deadline:</b> <i>20th of March</i></li>
+          </ul>
+          <div class="rule"></div>
+          <p style="margin:0;">
+            If you have any trouble accessing the survey, email us at
+            <b><a href="mailto:survey@theparson.co.uk">survey@theparson.co.uk</a></b>.
+          </p>
+        </section>
+
+      </div>
+
+      <div class="survey-wrap">
+        <div class="embed-shell">
+          
+            <h1> THIS IS THE SURVEY</h1>
+          <!-- =========================================================
+               PASTE YOUR GOOGLE FORMS EMBED IFRAME CODE BELOW THIS LINE
+               (Google Forms → Send → <> Embed → copy iframe)
+               ========================================================= -->
+
+          <!-- PASTE GOOGLE FORM IFRAME HERE -->
+
+          <!-- =========================================================
+               END GOOGLE FORMS EMBED PLACEHOLDER
+               ========================================================= -->
+        </div>
+        <p class="embed-note">
+            <b>Survey:</b> If the form doesn’t load, you can also open it in a new tab:
+            <a href="#" target="_blank" rel="noopener noreferrer"><b>[paste direct Google Form link here]</b></a>
+          </p>
+      </div>
+
+      <div style="text-align: center; margin-top: 18px;">
+        <img alt="The Parson" src="static/LogoSquare.png" width="20%">
+      </div>
+      <br>
+    </main>
+
+    <footer class="footer">
+      © 2025 The Parson - The free local newspaper for Parsons Green
+    </footer>
+  </div>
+
+  <div class="seo-link">
+    <a href="/answers/">SEO content</a>
+  </div>
+
+  <!-- Google tag (gtag.js) - same as main page -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8P7PB34GT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N8P7PB34GT');
+  </script>
+</body>
+</html>
