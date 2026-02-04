@@ -23,7 +23,7 @@
 
     body{
       margin:0;
-      background: var(--parson-green) url('static/black-orchid.png');
+      background: var(--parson-green) url('/static/black-orchid.png');
       font-family: 'Crimson Text', serif !important;
       color: var(--ink);
     }
@@ -34,7 +34,7 @@
     .container{
       max-width: var(--max-width);
       margin: 20px auto;
-      background: var(--paper) url('static/paper-fibres.png');
+      background: var(--paper) url('/static/paper-fibres.png');
       background-size: auto;
       box-shadow: 0 10px 35px rgba(0,0,0,0.35);
       border: 1px solid #ccc;
@@ -126,6 +126,8 @@
       background: rgba(255,255,255,0.35);
       padding: 16px;
       margin-top: 8px;
+      width: 100%;
+  box-sizing: border-box;
     }
 
     /* Footer */
@@ -220,7 +222,7 @@
     <div class="below">
       <!-- Main content -->
       <main>
-        <section class="content-card">
+        <section class="procedure-placeholder">
   <h3>How to make a complaint</h3>
 
   <p>
@@ -325,7 +327,7 @@
     </div>
 
     <div style="text-align: center;">
-      <img alt="The Parson" src="static/LogoSquare.png" width="20%">
+      <img alt="The Parson" src="/static/LogoSquare.png" width="20%">
     </div>
     <br>
 
