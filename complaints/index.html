@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>Complaints Procedure | The Parson</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root{
+      --parson-green: #376f02;
+      --paper: #fffdf5;
+      --ink: #111;
+      --separator: #2d572c;
+      --max-width: 1020px;
+    }
+
+    body{
+      margin:0;
+      background: var(--parson-green) url('static/black-orchid.png');
+      font-family: 'Crimson Text', serif !important;
+      color: var(--ink);
+    }
+
+    a:link { color: var(--parson-green); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container{
+      max-width: var(--max-width);
+      margin: 20px auto;
+      background: var(--paper) url('static/paper-fibres.png');
+      background-size: auto;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.35);
+      border: 1px solid #ccc;
+    }
+
+    /* Masthead */
+    .masthead{
+      background: var(--parson-green);
+      color:var(--paper);
+      text-align:center;
+      padding:20px;
+      margin: 0 12px;
+    }
+    .masthead h1{
+      font-size:120px;
+      margin:0;
+      letter-spacing:4px;
+    }
+    .masthead .tagline{
+      font-size:28px;
+      margin-top:4px;
+      letter-spacing:3px;
+    }
+    .issue-bar{
+      background: var(--paper);
+      color:var(--parson-green);
+      font-weight:700;
+      font-size:18px;
+      padding:10px 8px;
+      display:flex;
+      justify-content:space-between;
+    }
+
+    /* Page header / hero */
+    .page-header{
+      padding: 20px 20px 0 20px;
+      text-align: center;
+    }
+    .page-header h2{
+      font-size: 60px;
+      margin: 10px 0 6px 0;
+    }
+    .page-header p{
+      font-size: 22px;
+      line-height: 1.5;
+      max-width: 860px;
+      margin: 0 auto 12px auto;
+      text-align: center;
+    }
+
+    /* Layout */
+    .below{
+      display:grid;
+      grid-template-columns:2fr 1fr;
+      gap:20px;
+      padding:20px;
+    }
+
+    .content-card{
+      border-top: 2px solid var(--separator);
+      padding-top: 16px;
+    }
+
+    .content-card h3{
+      font-size:28px;
+      margin:6px 0 12px 0;
+      color:var(--parson-green);
+      font-variant: small-caps;
+    }
+
+    /* Subheadings within content cards */
+    .content-card h4{
+      font-size:24px;
+      margin:14px 0 10px 0;
+      color:var(--parson-green);
+      font-variant: small-caps;
+    }
+
+    .content-card p,
+    .content-card li{
+      font-size:20px;
+      line-height:1.6;
+      text-align:justify;
+    }
+
+    /* Procedure box */
+    .procedure-placeholder{
+      border: 2px dashed var(--separator);
+      background: rgba(255,255,255,0.35);
+      padding: 16px;
+      margin-top: 8px;
+    }
+
+    /* Footer */
+    .footer{
+      text-align:center;
+      font-size:13px;
+      padding:12px;
+      border-top:1px solid var(--separator);
+      color:#555;
+    }
+
+    /* General responsive tweaks */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .seo-link{
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      font-size: 11px;
+      opacity: 0.6;
+      z-index: 1000;
+    }
+
+    .seo-link a{
+      color: #777;
+      text-decoration: none;
+    }
+
+    .seo-link a:hover{
+      text-decoration: underline;
+      opacity: 0.9;
+    }
+
+    /* Responsive adjustments */
+    @media(max-width: 1000px) {
+      .masthead h1 { font-size: 80px; }
+      .masthead .tagline { font-size: 20px; letter-spacing: 1px; }
+      .page-header h2 { font-size: 40px; }
+    }
+
+    @media(max-width: 800px) {
+      .below { grid-template-columns: 1fr; }
+      .page-header p,
+      .content-card p,
+      .content-card li { font-size: 18px; line-height: 1.5; }
+    }
+
+    @media(max-width: 500px) {
+      .masthead h1 { font-size: 50px; letter-spacing: 2px; }
+      .masthead .tagline { font-size: 16px; }
+      .page-header h2 { font-size: 28px; }
+      .page-header p,
+      .content-card p,
+      .content-card li { font-size: 16px; }
+      .issue-bar{
+        font-size: 14px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Issue bar -->
+    <div class="issue-bar">
+      <span>MONTHLY</span>
+      <span>FREE</span>
+    </div>
+
+    <!-- Masthead -->
+    <header class="masthead">
+      <h1>THE PARSON</h1>
+      <div class="tagline">THE FREE LOCAL NEWSPAPER FOR PARSONS GREEN</div>
+    </header>
+
+    <!-- Page title -->
+    <section class="page-header">
+      <h2>Complaints Procedure</h2>
+      <p>
+        If you believe we have made an error, or you’d like to raise a concern about something we’ve published,
+        please use the information below to contact us. We take complaints seriously and aim to respond promptly and fairly.
+      </p>
+    </section>
+
+    <!-- Main layout -->
+    <div class="below">
+      <!-- Main content -->
+      <main>
+        <section class="content-card">
+  <h3>How to make a complaint</h3>
+
+  <p>
+    <i>The Parson</i> is committed to working within and adhering strictly to the
+    <a href="https://www.ipso.co.uk/editors-code-of-practice" target="_blank" rel="noopener">
+      Editors’ Code of Practice
+    </a>.
+  </p>
+
+  <p>
+    However, if any person feels that <i>The Parson</i> has breached the Code in any way and wishes to make a complaint,
+    they should submit their complaint in writing to the Editor at
+    <b><a href="mailto:editor@theparson.co.uk">editor@theparson.co.uk</a></b>.
+  </p>
+
+  <h4>How to submit a complaint</h4>
+  <ul>
+    <li>
+      All complaints must include the name and date of the publication, with reference to the specific article in question.
+    </li>
+    <li>
+      Complaints must include a detailed description of the issue, with reference to specific words, phrases, images,
+      instances, dates and records that are relevant, and the clauses of the Editors’ Code of Practice which you believe
+      <i>The Parson</i> has breached.
+    </li>
+  </ul>
+
+  <h4>Who can complain?</h4>
+  <ul>
+    <li>
+      Complaints must be made on behalf of a named individual only, including complaints where businesses or organisations
+      are involved.
+    </li>
+    <li>
+      In submitting a complaint, you must provide your full name, address, phone number, and email address.
+    </li>
+  </ul>
+
+  <h4>What can I complain about?</h4>
+  <ul>
+    <li>
+      Complaints may be made about any article, feature, or advertisement published by <i>The Parson</i>.
+    </li>
+    <li>
+      Complaints may also be made about the conduct of an individual journalist or employee of <i>The Parson</i>, with
+      reference to the specific clauses of the Editors’ Code of Practice alleged to have been breached.
+    </li>
+  </ul>
+
+  <h4>Time limit</h4>
+  <ul>
+    <li>
+      Complaints must be contemporaneous and submitted within six months of publication.
+    </li>
+    <li>
+      <i>The Parson</i> will endeavour to respond to the complainant within 21 working days.
+    </li>
+  </ul>
+
+  <h4>Complaints process</h4>
+  <ul>
+    <li>
+      The Editor will acknowledge receipt of the complaint within three working days.
+    </li>
+    <li>
+      All complaints will be handled by the Editor of <i>The Parson</i>.
+    </li>
+    <li>
+      The Editor will investigate the complaint in accordance with the Editors’ Code of Practice and respond accordingly.
+    </li>
+    <li>
+      If a complaint is upheld, <i>The Parson</i> will inform the complainant of the remedial action taken or proposed.
+    </li>
+    <li>
+      If the complainant is not satisfied with the proposed resolution, the complaint will be referred to independent arbitration.
+    </li>
+  </ul>
+
+  <h4>Confidentiality</h4>
+  <p>
+    All information provided to <i>The Parson</i> will be handled sensitively and within the boundaries of the Data Protection Act 1998.
+  </p>
+</section>
+
+
+        <section class="content-card">
+          <h3>Quick Guide to Complaints</h3>
+          <p>When making a complaint, make sure to include:</p>
+          <ul>
+            <li>Your name and best contact details</li>
+            <li>The article/page (or issue date) your complaint relates to</li>
+            <li>A brief summary of the issue and what you believe is incorrect or unfair</li>
+            <li>Any supporting information or links</li>
+          </ul>
+          <p>Send that to: <b><a href="mailto:editor@theparson.co.uk">editor@theparson.co.uk</a></b></p>
+        </section>
+
+      </main>
+
+      <!-- Optional sidebar column kept empty to preserve layout (remove if you prefer a single column layout) -->
+      <div></div>
+    </div>
+
+    <div style="text-align: center;">
+      <img alt="The Parson" src="static/LogoSquare.png" width="20%">
+    </div>
+    <br>
+
+    <footer class="footer">
+      © 2025 The Parson - The free local newspaper for Parsons Green
+    </footer>
+  </div>
+
+  <div class="seo-link">
+    <a href="/answers/">SEO content</a>
+  </div>
+</body>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N8P7PB34GT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N8P7PB34GT');
+</script>
+</html>
